@@ -1,13 +1,29 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
-import { Person } from "../utils/Person";
+import { Entity, BaseEntity, Column, PrimaryColumn } from "typeorm";
 
 // entity decorator
 @Entity("client")
-export class Client extends Person {
-  @PrimaryColumn({
-    type: "uuid",
+export class Client extends BaseEntity {
+
+    @PrimaryColumn()
+    id: string
+
+  @Column()
+  first_name: string;
+
+  @Column()
+  last_name: string;
+
+  @Column({
+    unique: true,
   })
-  id: string;
+  email: string;
+
+  @Column({
+    unique: true,
+    length: 10,
+  })
+  card_number: string;
+
   @Column({
     type: "numeric",
   })

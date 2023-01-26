@@ -1,5 +1,12 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
-import { Person } from "../utils/Person";
+import { Person } from "src/commonuts/Person.commons";
+import {
+  Entity,
+  BaseEntity,
+  Column,
+  PrimaryColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from "typeorm";
 
 // entity decorator
 @Entity("client")

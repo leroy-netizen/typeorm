@@ -1,23 +1,21 @@
 import { createConnection } from "typeorm";
-import { Client } from "./entities/Client.entity";
-import { Banker } from "./entities/Banker.entity";
+import Client from './entities/Client.entity'
 
 const main = async () => {
   try {
-    createConnection({
+     createConnection({
       type: "postgres",
       host: "localhost",
       port: 5432,
       username: "leroy",
       password: "password",
-      database: "typeorm",
-      entities: [Client, Banker],
-      synchronize: true,
+         database: "typeorm",
+      
     });
     console.log("Connected to postgreql on port 5432");
   } catch (error) {
-    console.error(error);
-    throw new Error("Connecting to database failed");
+      console.error(error);
+      throw new Error("Connecting to database failed")
   }
 };
 

@@ -1,13 +1,15 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
-import { Person } from "../utils/Person";
+import { Entity, BaseEntity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn } from "typeorm";
 
 // entity decorator
 @Entity("client")
-export class Client extends Person {
+export class Client extends BaseEntity {
   @PrimaryColumn({
     type: "uuid",
   })
   id: string;
+
+
+
   @Column({
     type: "numeric",
   })
@@ -31,4 +33,10 @@ export class Client extends Person {
     default: [],
   })
   family_members: string[];
+    
+    @CreateDateColumn()
+    created_at: Date
+
+    @UpdateDateColumn()
+    updated_at: Date
 }

@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryColumn } from "typeorm";
-import { Person } from "../utils/Person";
+import { Person } from "src/utils/Person";
 
 // entity decorator
 @Entity("client")

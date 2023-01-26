@@ -11,7 +11,7 @@ const main = async () => {
       username: "leroy",
       password: "password",
       database: "typeorm",
-      entities: [Client, Banker],
+      entities: [Client],
       synchronize: true,
     });
     console.log("Connected to postgreql on port 5432");

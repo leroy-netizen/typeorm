@@ -1,0 +1,1 @@
+import { Entity, Column,  PrimaryColumn, Upda} from 'typeorm'
