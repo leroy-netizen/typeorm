@@ -4,8 +4,8 @@
   "description": "node with typeorm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev"
   },
   "author": "Leroy Ombiji",
   "license": "MIT",
