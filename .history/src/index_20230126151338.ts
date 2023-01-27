@@ -1,7 +1,7 @@
 import { createConnection } from "typeorm";
 import { Client } from "./entities/Client.entity";
 import { Banker } from "./entities/Banker.entity";
-import { Transaction } from './entities/Transction.entity';
+import { Transaction } from './entities/';
 
 const main = async () => {
   try {

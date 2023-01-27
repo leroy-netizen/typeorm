@@ -5,8 +5,7 @@ import { Person } from "../utils/Person";
 @Entity("client")
 export class Client extends Person {
   @PrimaryGeneratedColumn()
-  id: number;
-  
+  id: string;
   @Column({
     type: "numeric",
   })

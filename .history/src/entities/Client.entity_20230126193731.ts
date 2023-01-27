@@ -6,7 +6,6 @@ import { Person } from "../utils/Person";
 export class Client extends Person {
   @PrimaryGeneratedColumn()
   id: number;
-  
   @Column({
     type: "numeric",
   })

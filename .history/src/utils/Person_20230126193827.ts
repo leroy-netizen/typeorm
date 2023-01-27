@@ -2,7 +2,7 @@ import {
   Entity,
   BaseEntity,
   Column,
-  PrimaryGeneratedColumn,
+  PrimaryColumn,
   CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
@@ -10,7 +10,7 @@ import {
 @Entity("person")
 export class Person extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column()
   first_name: string;

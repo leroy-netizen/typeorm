@@ -4,9 +4,10 @@ import { Person } from "../utils/Person";
 // entity decorator
 @Entity("client")
 export class Client extends Person {
-  @PrimaryGeneratedColumn()
-  id: number;
-  
+  @PrimaryGeneratedColumn({
+    type: "uuid",
+  })
+  id: string;
   @Column({
     type: "numeric",
   })

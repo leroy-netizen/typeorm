@@ -9,8 +9,10 @@ import {
 
 @Entity("person")
 export class Person extends BaseEntity {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn({
+    type: "uuid",
+  })
+  id: string;
 
   @Column()
   first_name: string;

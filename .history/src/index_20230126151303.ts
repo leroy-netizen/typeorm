@@ -1,7 +1,6 @@
 import { createConnection } from "typeorm";
 import { Client } from "./entities/Client.entity";
 import { Banker } from "./entities/Banker.entity";
-import { Transaction } from './entities/Transction.entity';
 
 const main = async () => {
   try {
@@ -12,7 +11,7 @@ const main = async () => {
       username: "leroy",
       password: "password",
       database: "typeorm",
-      entities: [Client, Banker, Transaction],
+      entities: [Client, Banker, Transact],
       synchronize: true,
     });
     console.log("Connected to postgreql on port 5432");
