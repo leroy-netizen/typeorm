@@ -6,9 +6,8 @@ import {
 
 @Entity("banker")
 export class Banker extends Person {
-  @PrimaryGeneratedColumn()
-  id: number;
 
+  
   @Column()
   employee_number: string;
 }
