@@ -1,5 +1,8 @@
 import { Person } from "../utils/Person";
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import {
+  Entity,
+  Column,
+} from "typeorm";
 
 @Entity("banker")
 export class Banker extends Person {
