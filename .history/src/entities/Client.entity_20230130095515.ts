@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { Person } from "../utils/Person";
 import { Transaction } from "./Transaction.entity";
 
@@ -36,5 +36,6 @@ export class Client extends Person {
     () => Transaction,
     transaction => transaction.client,
   )
-  transactions: Transaction[]
+
+  @Jo
 }

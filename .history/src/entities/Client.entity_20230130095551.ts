@@ -36,5 +36,9 @@ export class Client extends Person {
     () => Transaction,
     transaction => transaction.client,
   )
-  transactions: Transaction[]
+
+  @JoinColumn({
+    name: "transaction_id"
+  })
+  transaction: Client
 }

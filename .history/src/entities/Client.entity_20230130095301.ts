@@ -1,6 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 import { Person } from "../utils/Person";
-import { Transaction } from "./Transaction.entity";
 
 // entity decorator
 @Entity("client")
@@ -34,7 +33,7 @@ export class Client extends Person {
 
   @OneToMany(
     () => Transaction,
-    transaction => transaction.client,
+    transac
+
   )
-  transactions: Transaction[]
 }

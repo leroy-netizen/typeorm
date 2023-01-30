@@ -36,5 +36,6 @@ export class Client extends Person {
     () => Transaction,
     transaction => transaction.client,
   )
+    transaction: Transaction
   transactions: Transaction[]
 }

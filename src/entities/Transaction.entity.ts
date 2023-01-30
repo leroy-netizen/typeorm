@@ -1,11 +1,13 @@
 import {
   Column,
   Entity,
-  PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
+  ManyToOne,
   BaseEntity,
+  JoinColumn,
+  PrimaryGeneratedColumn
 } from "typeorm";
+
+import {Client} from "./Client.entity"
 
 export enum TransactionTypes{
     DEPOSIT = "deposit",
@@ -27,4 +29,15 @@ export class Transaction extends BaseEntity {
         type: "numeric"
     })
     amount: number
+
+    @ManyToOne(
+
+      () => Client,
+      client => client.transactions
+    )
+  
+    @JoinColumn({
+      name: "client_id"
+    })
+    client: Client
 }
